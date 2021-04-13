@@ -30,8 +30,8 @@ const getMatchingCities = async (searchTerm) => {
 function bindMatches(resultMatches) {
     const outputHtml = resultMatches.map(result => {
                        return `<div class="card card-header bg-warning mb-1 text-left">
-                                <h5><span class="text-info text-left">${result.capital === '' ? 'Capital not found': result.capital} - </span>
-                                    <span class="text-muted">(${result.name}</span><span class="text-muted">)</span></h5>
+                                <h5><span class="text-info text-left">Capital: </span><span class="text-muted">${result.capital === '' ? ' Not found': result.capital} - </span>
+                                <span class="text-info">(Country:</span><span class="text-muted ml-2">${result.name}</span><span class="text-info">)</span></h5>
                                 <h5><span class="text-info">
                                         Currency:
                                     </span>
